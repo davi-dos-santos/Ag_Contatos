@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/azulclaro"
     tools:context=".Activity2">
 
-    <Button
-        android:id="@+id/Btn_Voltar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageButton
+        android:id="@+id/Btn_Voltar_img"
+        android:layout_width="63dp"
+        android:layout_height="63dp"
         android:onClick="Voltar_actvity_main"
-        android:text="Voltar"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/voltar" />
 </androidx.constraintlayout.widget.ConstraintLayout>
