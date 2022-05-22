@@ -28,28 +28,44 @@ public class MainActivity extends AppCompatActivity {
         Btn_Cadastrar=(Button) findViewById(R.id.Btn_Cadastrar);
         Btn_listar=(Button) findViewById(R.id.Btn_listar);
 
-        criarAbrirDB();
+        AbrirBanco();
+        AbrirOuCriarTabela();
         fecharDB();
 
     }
 
-    public void criarAbrirDB(){
+    public void AbrirBanco(){
         try {
             db=openOrCreateDatabase("BancoAgenda", MODE_PRIVATE, null);
         }catch (Exception ex){
             msg("Erro ao abrir ou criar BD");
+        }finally {
+            msg("BD aberto");
         }
+    }
+
+    public void AbrirOuCriarTabela(){
         try {
             db.execSQL("CREATE TABLE IF NOT EXISTS contatos (id INTEGER PRIMARY KEY, nome TEXT, fone TEXT, email TEXT, endereço TEXT, dataNsc TEXT)");
         }catch (Exception ex){
             msg("Erro ao abrir ou criar Tabela");
-        }finally {
-            msg("Tabela contatos criada");
         }
     }
 
     public void fecharDB(){
         db.close();
+    }
+
+    public void inserirRegistro(){
+        AbrirBanco();
+        String st_nome, st_fone, st_email, st_endereco, st_dataNsc;
+        db.execSQL("");
+        fecharDB();
+    }
+
+    public void abrir_Cadastro(View v){
+        Intent cadsatrar=new Intent(this, Cadastro.class);
+        startActivity(cadsatrar);
     }
 
     public void abrir_Actvity2(View v){

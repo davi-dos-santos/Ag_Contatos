@@ -7,6 +7,15 @@
     android:background="@color/azulclaro"
     tools:context=".Activity2">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="232dp"
+        android:layout_height="134dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ag_telefonica"
+        tools:layout_editor_absoluteY="16dp" />
+
     <ImageButton
         android:id="@+id/Btn_Voltar_img"
         android:layout_width="63dp"
