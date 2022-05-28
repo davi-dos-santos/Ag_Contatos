@@ -8,81 +8,77 @@
     tools:context=".Activity2">
 
     <EditText
-        android:id="@+id/et_dataNasc"
+        android:id="@+id/et_dataNasc_consulta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:ems="10"
-        android:hint="01/01/0001"
-        android:inputType="date"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_endereco" />
+        app:layout_constraintTop_toBottomOf="@+id/et_endereco_consulta" />
 
     <TextView
         android:id="@+id/textDataNasc5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Data Nasc.:"
-        app:layout_constraintBottom_toTopOf="@+id/et_dataNasc"
+        app:layout_constraintBottom_toTopOf="@+id/et_dataNasc_consulta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.294"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/et_email"
+        android:id="@+id/et_email_consulta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:ems="10"
-        android:hint="exemplo@exemplo.com"
-        android:inputType="textEmailAddress"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_telefone" />
+        app:layout_constraintTop_toBottomOf="@+id/et_telefone_consulta" />
 
     <TextView
         android:id="@+id/textEmail6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Email:"
-        app:layout_constraintBottom_toTopOf="@+id/et_email"
+        app:layout_constraintBottom_toTopOf="@+id/et_email_consulta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.268"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/et_telefone"
+        android:id="@+id/et_telefone_consulta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:ems="10"
-        android:hint="(00) 00000 - 0000"
-        android:inputType="number"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_nome" />
+        app:layout_constraintTop_toBottomOf="@+id/et_nome_consulta" />
 
     <TextView
         android:id="@+id/textTelefone5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Telefone:"
-        app:layout_constraintBottom_toTopOf="@+id/et_telefone"
+        app:layout_constraintBottom_toTopOf="@+id/et_telefone_consulta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.283"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/et_nome"
+        android:id="@+id/et_nome_consulta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:ems="10"
-        android:hint="Davi do Santos"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -95,7 +91,7 @@
         android:layout_height="21dp"
         android:layout_marginTop="172dp"
         android:text="Nome:"
-        app:layout_constraintBottom_toTopOf="@+id/et_nome"
+        app:layout_constraintBottom_toTopOf="@+id/et_nome_consulta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.273"
         app:layout_constraintStart_toStartOf="parent"
@@ -121,24 +117,23 @@
         app:srcCompat="@drawable/voltar" />
 
     <EditText
-        android:id="@+id/et_endereco"
+        android:id="@+id/et_endereco_consulta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:ems="10"
-        android:hint="Rua 1"
-        android:inputType="textEmailAddress"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_email" />
+        app:layout_constraintTop_toBottomOf="@+id/et_email_consulta" />
 
     <TextView
         android:id="@+id/textEndereco6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Endereço:"
-        app:layout_constraintBottom_toTopOf="@+id/et_endereco"
+        app:layout_constraintBottom_toTopOf="@+id/et_endereco_consulta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.286"
         app:layout_constraintStart_toStartOf="parent" />

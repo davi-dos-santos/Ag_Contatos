@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
 public class Cadastro extends AppCompatActivity {
 
@@ -29,11 +28,11 @@ public class Cadastro extends AppCompatActivity {
 
         Btn_Voltar_img=(ImageButton) findViewById(R.id.Btn_Voltar_img);
 
-        et_nome =(EditText) findViewById(R.id.et_nome);
-        et_telefone =(EditText) findViewById(R.id.et_telefone);
-        et_email =(EditText) findViewById(R.id.et_email);
-        et_endereco =(EditText) findViewById(R.id.et_endereco);
-        et_dataNasc =(EditText) findViewById(R.id.et_dataNasc);
+        et_nome =(EditText) findViewById(R.id.et_nome_consulta);
+        et_telefone =(EditText) findViewById(R.id.et_telefone_consulta);
+        et_email =(EditText) findViewById(R.id.et_email_consulta);
+        et_endereco =(EditText) findViewById(R.id.et_endereco_consulta);
+        et_dataNasc =(EditText) findViewById(R.id.et_dataNasc_consulta);
 
         buscarDados();
 

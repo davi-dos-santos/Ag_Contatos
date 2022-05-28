@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.Cursor;
+import android.widget.*;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,19 +26,20 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
 
-        Btn_Cadastrar = (Button) findViewById(R.id.Btn_Cadastrar);
-        Btn_listar = (Button) findViewById(R.id.Btn_listar);
-        et_nome =(EditText) findViewById(R.id.et_nome);
-        et_telefone =(EditText) findViewById(R.id.et_telefone);
-        et_email =(EditText) findViewById(R.id.et_email);
-        et_endereco =(EditText) findViewById(R.id.et_endereco);
-        et_dataNasc =(EditText) findViewById(R.id.et_dataNasc);
+        Btn_Cadastrar=(Button) findViewById(R.id.Btn_Cadastrar);
+        Btn_listar=(Button) findViewById(R.id.Btn_listar);
+        et_nome=(EditText) findViewById(R.id.et_nome_consulta);
+        et_telefone=(EditText) findViewById(R.id.et_telefone_consulta);
+        et_email=(EditText) findViewById(R.id.et_email_consulta);
+        et_endereco=(EditText) findViewById(R.id.et_endereco_consulta);
+        et_dataNasc=(EditText) findViewById(R.id.et_dataNasc_consulta);
 
         AbrirBanco();
         AbrirOuCriarTabela();
-        fecharDB();
+        FecharDB();
 
     }
+
 
     public void msg(String txt){
         AlertDialog.Builder adb=new AlertDialog.Builder(this);
@@ -53,47 +56,39 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void fecharDB(){
-        db.close();
-    }
-
     public void AbrirOuCriarTabela(){
         try {
-            db.execSQL("CREATE TABLE IF NOT EXISTS contatos (id INTEGER PRIMARY KEY, nome TEXT, telefone TEXT, email TEXT, endereco TEXT, dataNsc TEXT)");
-        }catch (Exception ex){
-            msg("Erro ao abrir ou criar Tabela");
+            db.execSQL("CREATE TABLE IF NOT EXISTS contatos (id INTEGER PRIMARY KEY, Nome TEXT, Telefone TEXT, email TEXT, endereco TEXT, dataNasc TEXT);");
+        }catch (Exception ex) {
+            msg("Erro ao abrir tabela");
         }
     }
 
 
-    public void inserirRegistro(View v){
-        String st_nome, st_telefone, st_email, st_endereco, st_dataNsc;
+   public void FecharDB(){
+        db.close();
+    }
+
+    public void InserirRegistros(View v){
+        String st_nome, st_telefone;
         st_nome=et_nome.getText().toString();
         st_telefone=et_telefone.getText().toString();
-        st_email=et_email.getText().toString();
-        st_endereco=et_endereco.getText().toString();
-        st_dataNsc=et_dataNasc.getText().toString();
-        if(st_nome=="" || st_telefone=="" || st_email=="" || st_endereco=="" || st_dataNsc==""){
+        if(st_nome=="" || st_telefone==""){
             msg("Campos não podem esta Vazios");
             return;
         }
         AbrirBanco();
-        try{
-            db.execSQL("INSERT INTO contatos (nome, telefone, email, endereco, dataNsc) VALUES ('"+st_nome+"', '"+st_telefone+"', '"+st_email+"', '"+st_endereco+"', '"+st_dataNsc+"')");
+        try {
+            db.execSQL("INSERT INTO contatos (nome, telefone) VALUES('"+st_nome+"', '"+st_telefone+"')");
         }catch (Exception ex){
-            msg("Erro ao salvar registro");
+            msg("erro inserir reg");
         }finally {
-            msg("Registro inseridos");
+            msg("Reg inserir ");
         }
-        fecharDB();
+        FecharDB();
         et_nome.setText(null);
         et_telefone.setText(null);
-        et_email.setText(null);
-        et_endereco.setText(null);
-        et_dataNasc.setText(null);
     }
-
-
 
 
     public void abrir_Cadastro(View v){

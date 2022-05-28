@@ -20,7 +20,7 @@
         android:id="@+id/imageView3"
         android:layout_width="165dp"
         android:layout_height="72dp"
-        app:layout_constraintBottom_toTopOf="@+id/et_nome"
+        app:layout_constraintBottom_toTopOf="@+id/et_nome_consulta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="220dp"
         android:text="Nome:"
-        app:layout_constraintBottom_toTopOf="@+id/et_nome"
+        app:layout_constraintBottom_toTopOf="@+id/et_nome_consulta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.272"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +41,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/et_nome"
+        android:id="@+id/et_nome_consulta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
@@ -49,7 +49,7 @@
         android:ems="10"
         android:hint="Davi do Santos"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/et_telefone"
+        app:layout_constraintBottom_toTopOf="@+id/et_telefone_consulta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,13 +61,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Telefone:"
-        app:layout_constraintBottom_toTopOf="@+id/et_telefone"
+        app:layout_constraintBottom_toTopOf="@+id/et_telefone_consulta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.283"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/et_telefone"
+        android:id="@+id/et_telefone_consulta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -75,24 +75,24 @@
         android:ems="10"
         android:hint="(00) 00000 - 0000"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/et_email"
+        app:layout_constraintBottom_toTopOf="@+id/et_email_consulta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_nome" />
+        app:layout_constraintTop_toBottomOf="@+id/et_nome_consulta" />
 
     <TextView
         android:id="@+id/textEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Email:"
-        app:layout_constraintBottom_toTopOf="@+id/et_email"
+        app:layout_constraintBottom_toTopOf="@+id/et_email_consulta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.268"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/et_email"
+        android:id="@+id/et_email_consulta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -100,23 +100,23 @@
         android:ems="10"
         android:hint="exemplo@exemplo.com"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/et_endereco"
+        app:layout_constraintBottom_toTopOf="@+id/et_endereco_consulta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_telefone" />
+        app:layout_constraintTop_toBottomOf="@+id/et_telefone_consulta" />
 
     <TextView
         android:id="@+id/textEndereco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Endereço:"
-        app:layout_constraintBottom_toTopOf="@+id/et_endereco"
+        app:layout_constraintBottom_toTopOf="@+id/et_endereco_consulta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.289"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/et_endereco"
+        android:id="@+id/et_endereco_consulta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -124,23 +124,23 @@
         android:ems="10"
         android:hint="Rua 1"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/et_dataNasc"
+        app:layout_constraintBottom_toTopOf="@+id/et_dataNasc_consulta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_email" />
+        app:layout_constraintTop_toBottomOf="@+id/et_email_consulta" />
 
     <TextView
         android:id="@+id/textDataNasc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Data Nasc.:"
-        app:layout_constraintBottom_toTopOf="@+id/et_dataNasc"
+        app:layout_constraintBottom_toTopOf="@+id/et_dataNasc_consulta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.294"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/et_dataNasc"
+        android:id="@+id/et_dataNasc_consulta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -151,6 +151,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_endereco" />
+        app:layout_constraintTop_toBottomOf="@+id/et_endereco_consulta" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
