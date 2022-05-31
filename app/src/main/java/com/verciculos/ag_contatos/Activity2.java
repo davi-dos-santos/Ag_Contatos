@@ -83,11 +83,29 @@ public class Activity2 extends AppCompatActivity {
     }
 
     public void proximoRegistro(View v){
-        cursor.moveToNext();
+        try{
+            cursor.moveToFirst();
+            MostrarDados();
+        }catch (Exception ex){
+            if(cursor.isAfterLast()){
+                msg("Não tem mais regsitro");
+            }else{
+                msg("Erro ao navegar");
+            }
+        }
     }
 
     public void anteriorRegistro(View v){
-        cursor.moveToPrevious();
+        try{
+            cursor.moveToPrevious();
+            MostrarDados();
+        }catch (Exception ex){
+            if(cursor.isBeforeFirst()){
+                msg("Não tem mais regsitro");
+            }else{
+                msg("Erro ao navegar");
+            }
+        }
     }
 
     @SuppressLint("Range")
