@@ -14,8 +14,41 @@ import android.widget.ImageButton;
 import android.database.Cursor;
 import android.widget.*;
 
+import com.verciculos.ag_contatos.DAO.DAO;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Activity2 extends AppCompatActivity {
 
+    ListView ListView;
+    Button Btn_listar;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Btn_listar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                    DAO dao2 = new DAO(getApplicationContext());
+                    List<Pessoa> pessoas = dao2.buscaPessoa();
+                    List<String> nomes = new ArrayList<String>();
+
+                    for (Pessoa nomeBuscado : pessoas){
+                        nomes.add(nomeBuscado.getEt_nome_consulta());
+                    }
+
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_expandable_list_item_1, nomes);
+                    ListView.setAdapter(adapter);
+            }
+        });
+
+    }
+
+/*
     ImageButton Btn_Voltar_img;
     EditText et_nome, et_telefone, et_email, et_endereco, et_dataNasc;
     SQLiteDatabase db=null;
@@ -27,8 +60,6 @@ public class Activity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_2);
-
-        Btn_Voltar_img=(ImageButton) findViewById(R.id.Btn_Voltar_img);
 
         et_nome =(EditText) findViewById(R.id.et_nome_consulta);
         et_telefone =(EditText) findViewById(R.id.et_telefone_consulta);
@@ -115,6 +146,6 @@ public class Activity2 extends AppCompatActivity {
     }
 
 
-
+*/
 
 }

@@ -26,7 +26,6 @@ public class Cadastro extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_cadastro);
 
-        Btn_Voltar_img=(ImageButton) findViewById(R.id.Btn_Voltar_img);
 
         et_nome =(EditText) findViewById(R.id.et_nome_consulta);
         et_telefone =(EditText) findViewById(R.id.et_telefone_consulta);
